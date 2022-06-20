@@ -202,27 +202,81 @@
 //         console.log('хэллоу ${this.nameObj} меня зовут ${this.firstName}-${this.secondName}')
 //     }
 // }
+//
+// let pers = {
+//   nameObj: "jedi",
+//   Name: "yoda",
+//   age: 1579,
+//   friends: ["choobakka", "han solo"],
+// };
+//
+// let starship = {
+//   nameObj: "ship",
+//   name: "sokol1000",
+//   model: "h1n1",
+//   year: 70397,
+// };
+//
+// function printObject(obj) {
+//   console.log("Printing object name", obj);
+//
+//   for (let key in this) {
+//     console.log(`[${key}]`, this[key]);
+//   }
+// }
+//
+// printObject.call(pers, ["first person"]);
 
-let pers = {
-  nameObj: "jedi",
-  Name: "yoda",
-  age: 1579,
-  friends: ["choobakka", "han solo"],
-};
 
-let starship = {
-  nameObj: "ship",
-  name: "sokol1000",
-  model: "h1n1",
-  year: 70397,
-};
 
-function printObject(obj) {
-  console.log("Printing object name", obj);
 
-  for (let key in this) {
-    console.log(`[${key}]`, this[key]);
-  }
-}
+//Функция constructor !!!!!!!!
 
-printObject.call(pers, ["first person"]);
+//
+// function  foo(name) {
+//
+// // создается новый объект
+//
+//   this.name = name
+// }
+//  const  result = new foo ('Ilya' )
+// console.log(result)
+
+
+
+
+
+// Магазин Грибов
+
+// const Shop = function ({name, fillial}) {
+//   this.name =name
+//   this.fillial = fillial
+//   this.getBirthday = function (){
+//     const  currentYear = new Date().getFullYear()
+//     cosole.log(`Конструктор создал имя ${this.name} дата ${currentYear - this.fillial}`, )
+//   }
+// }
+//
+// let shopFillial = new Shop ({name: 'Mushrooms', fillial : 2})
+// let shopFillial2 = new Shop ({name: 'Smetana', fillial : 3})
+//
+// console.log(shopFillial)
+// console.log(shopFillial2)
+// shopFillial.getBirthday()shopFillial2.getBirthday()
+
+//
+// const Shop = function ({name, fillial}) {
+//   this.name =name
+//   this.fillial = fillial
+//   this.getBirthday = function (){
+//     const  currentYear = new Date().getFullYear()
+//     cosole.log(`Конструктор создал имя ${this.name} дата ${currentYear - this.fillial}`, )
+//   } const Shop = function ({name, fillial})
+// }
+//
+// let shopFillial = new Shop ({name: 'Mushrooms', fillial : 2})
+// let shopFillial2 = new Shop ({name: 'Smetana', fillial : 3})
+//
+// console.log(shopFillial)
+// console.log(shopFillial2)
+// shopFillial.getBirthday()shopFillial2.getBirthday()
