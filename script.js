@@ -1,282 +1,113 @@
-// let str1 = 'Hello'
-
-// let str2 = str1
-
-// str1 = 'Hi'
-
-// console.log (str1, str2);
-
-// const group = ['Лена', 'Злата' ,'Оксана']
-// const group2 = group
-
-// const group2 = group.slice()
-
-// console.log('group', group)
-
-// const group2 = [].concat(group)
-
-// const group2 =[...group]
-
-// const group2 = Array.from(group)
-
-// Array.from(group, (item) => ({group: {studentName: item, class: 'f1021'}}))
-
-// const obj1 = {
-//   name: 'Ilya',
-//    phone: undefined,
-//    info: job
+// for (var  i = 0; i < 5; i++) {
+//     setTimeout( () =>{
+//         console.log(i)
+//     }, 0)
 // }
 
-// const obj2 = {...obj1}
 
-// obj1.phone = 333
-
-// obj1.info.job = 'Back - End'
-
-// console.log ('obj2', obj);
-
-// const getCloneObject = { a, b ,c };
-
-// Object.assign (getCloneObject, {a , b, c});
-
-// console.log(getCloneObject);
-
-// const getCloneObject = { big: "?", little: "?" };
-
-// Object.assign(getCloneObject, { big: "?" });
-
-// console.log(getCloneObject);
-
-// let product = {
-//   name: "John",
-//   price: 30,
-//   sold: false
-// };
-
-// let product2 = product;
-// console.log(product2);
-
-// function logPerson (obj) {
-//   console.log (`${obj.name} работает ${obj.obj}`)
-// }
-
-// const person = {
-//   name: 'Ilya',
-//   job: 'Front'
-// }
-
-// logPerson(person)
-
-// const person = {
-//   name: 'Ilya',
-//   job: 'Front',
-//   phone: 333,
-
-//   info: {job: 'Frontend'}
-// }
-
-// const {name, phone, info: {job= 'Front-end'}} = person
-// console.log(name, phone, profession)
-
-// let someArray = ['Tony', 'Stark', {name: 'Ilya', arr: ['text', 'text2']}]
-// const [name, secondName, {name: firstName,}] = someArray
-// console.log(name, secondName, firstName);
-
-// let someArray = ["Tony", "Stark", { name: "Ilya", arr: ["text", "text2"] }, [1, 45, 2, 5] 'ect', 'max', 'min'],;
-// const [name, secondName, { name: firstName, arr: [text1, text2],[,,one, two, five] }] = someArray;
-// console.log(name, secondName, firstName);
-
-// let someArray = ["Tony", "Stark", { name: "Ilya", arr: ["text", "text2"] }, [1, 45, 2, 5], 'ect', 'max', 'min'],;
-// const [name, secondName, { name: firstName = 'NoName', arr: [text1, text2]} ,[, ,two = '333']] = someArray;
-// console.log(name, secondName, firstName, text1, text2, two, five);
-
-// const form = window.document.querySelector('form')
-
-// form.addEventListener('submit', function (e) {
-//   e.preventDefault()
-
-//   const title = form.title.value
-//   const comment = form.comment.value
-
-//   console.log('title' , title)
-//   console.log("comment", comment);
-
-//   saveForm(title, comment)
-// })
-
-// function saveForm(data) {
-
-//   const formData = {
-//     date: new Date().toLocaleDateString(),
-//     ...data
-//   }
-// }
-
-// document.createDocumentFragment
-
-// const arr = [ 'abba', 'anna', 'okko']{
-//     function name(params) {
-
-//        return ({'abba', 'anna', 'okko'})
+// const checkEvent = (1,2,3,4,5,6,7,8,9);
+// for (let i = 2; i <= 10; i++) {
+//     if (i % 2 == 0) {
+//         console.log( i );
 //     }
 // }
-// console.log(arr, {});
 
-// let arr = [ 'abba', 'anna', 'okko', 'big']
 
-// function getPalindrom (arr)  {
-//     return arr.filter((element, index) => element.toLowerCase() ===
-//     arr[index].toLowerCase().split('').reverse().join(''))
+// конкретинация 23
+
+// const a = '2'
+// const b = 3
+// const c =  a + b
+//
+// console.log(c)
+
+
+// const test = [] + null * 1 + '2'
+//
+// console.log(test)
+
+ /////
+
+// const test = [] + null * 1 + '2'
+//
+// console.log([] + null * 1)
+
+// const foo = ('* / - +', 1, 2, 3)
+// function result( symbol , number)  {
+// return (result);
 // }
-// console.log(arr, {});
+//
+// console.log(foo);
 
-// const obj = {
-//   name: "Ilya",
-//   mailto: "6370303@mail.ru",
-//   password: "qwertasdfg1234",
-// };
 
-// let result ='https://itstep.by/?name = 'Ilya&mailto'
 
-// const parswObjectToString = (obj) => {
-//     let resultStr = ''
-//     Object.entries(obj).reduce((acc: string ,[fieldKey: string , fieldName]) =>{
-//         return `${acc}` + `${fieldKey}=${fieldName}&`
-//     }, '?')
-
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8]
+//
+// const foo = (arr, value) => {
+//
 // }
-
-// const createUrl = (str) => {
-//     return
-//  'https://itstep.by/${str}'}
-
-// console.log(Object.keys(obj));
-
-// const obj = {
-//   name: "Ilya",
-//   mail: "6370303@mail.ru",
-//   password: "qwertasdfg1234",
-// };
-
-// let result = "https://itstep.by/?name=Ilya&mail";
-
-// const parswObjectToString = (obj) => {
-//   return Object.entries(obj).reduce((acc, [fieldKey, fieldName]) => {
-//     return acc + `${fieldKey}=${fieldName}&`;
-//   }, "?");
-// };
-
-// const createUrl = (str) => {
-//   return "https://itstep.by/${str}";
-// };
-
-// let a = createUrl(parswObjectToString(obj));
-
-// console.log(a);
-
-// function foo (name, a) {
-//   this.name = name;
-//   this.aaa = a;
-
-// }
-
-// window.foo('name', 'aaaa')
-
-// let obj = {
-//      age: 39,
-//      printAge: function () {
-//          console.log(this.age)
-//      }
-// }
-
-// obj.printAge()
-
-// console.log(window.foo)
-
-// const person = {
-//     nameObj: 'PERSON'
-//     firstName: 'Max',
-//     secondName: 'Maximus',
-
-//     printFullName: function (age) {
-//         console.log('хэллоу ${this.nameObj} меня зовут ${this.firstName}-${this.secondName}')
+// for(var i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2 === 0){
+//         console.log(arr[i]);
 //     }
 // }
+// foo(arr, 2)
+
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8]
 //
-// let pers = {
-//   nameObj: "jedi",
-//   Name: "yoda",
-//   age: 1579,
-//   friends: ["choobakka", "han solo"],
-// };
-//
-// let starship = {
-//   nameObj: "ship",
-//   name: "sokol1000",
-//   model: "h1n1",
-//   year: 70397,
-// };
-//
-// function printObject(obj) {
-//   console.log("Printing object name", obj);
-//
-//   for (let key in this) {
-//     console.log(`[${key}]`, this[key]);
-//   }
+// const foo = (arr) => {
+// return arr.slice(1, -1).join(' ') || null
 // }
 //
-// printObject.call(pers, ["first person"]);
+// console.log(foo(arr))
 
-
-
-
-//Функция constructor !!!!!!!!
-
+// let someArray = ['Tony', 'Stark', {name: null, arr:[ 'text', 'text2']}, [1, 45, 2, 5, 34, 9, 11]]
+// const [t, s] = Array.prototype.slice.call(name, someArray);
+// console.log(someArray);
 //
-// function  foo(name) {
-//
-// // создается новый объект
-//
-//   this.name = name
-// }
-//  const  result = new foo ('Ilya' )
-// console.log(result)
-
-
-
-
-
-// Магазин Грибов
-
-// const Shop = function ({name, fillial}) {
-//   this.name =name
-//   this.fillial = fillial
-//   this.getBirthday = function (){
-//     const  currentYear = new Date().getFullYear()
-//     cosole.log(`Конструктор создал имя ${this.name} дата ${currentYear - this.fillial}`, )
-//   }
+// function foo () {
+//     console.log(this)
 // }
 //
-// let shopFillial = new Shop ({name: 'Mushrooms', fillial : 2})
-// let shopFillial2 = new Shop ({name: 'Smetana', fillial : 3})
-//
-// console.log(shopFillial)
-// console.log(shopFillial2)
-// shopFillial.getBirthday()shopFillial2.getBirthday()
+// window.foo()
 
-//
-// const Shop = function ({name, fillial}) {
-//   this.name =name
-//   this.fillial = fillial
-//   this.getBirthday = function (){
-//     const  currentYear = new Date().getFullYear()
-//     cosole.log(`Конструктор создал имя ${this.name} дата ${currentYear - this.fillial}`, )
-//   } const Shop = function ({name, fillial})
-// }
-//
-// let shopFillial = new Shop ({name: 'Mushrooms', fillial : 2})
-// let shopFillial2 = new Shop ({name: 'Smetana', fillial : 3})
-//
-// console.log(shopFillial)
-// console.log(shopFillial2)
-// shopFillial.getBirthday()shopFillial2.getBirthday()
+
+console.log(myName)
+
+const  p = document.querySelector('first')
+const  span = document.querySelector('span')
+
+let text = document.createElement('span')
+text.innerText = myName
+
+p.insertAdjacentHTML('beforeend', text)
+
+document.addEventListener('DOMContentloaded', ()=>{
+    console.log('DOMContentloaded')
+})
+
+window.addEventListener('load', ()=>{
+    console.log('load')
+    console.log(picture.offsetHeight)
+})
+
+window.onload = function () {
+    console.log('load')
+}
+
+function unload(){
+    navigator.sendBeacon('some path', JSON.stringify( {
+        data:"some data"
+    }))
+}
+
+window.addEventListener('unload', unload)
+
+function beforeunload (){
+    console.log('beforeunload')
+    return false
+}
+
+window.addEventListener('beforeunload', beforeunload)
