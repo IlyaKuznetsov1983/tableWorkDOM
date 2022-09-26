@@ -74,40 +74,40 @@
 // window.foo()
 
 
-console.log(myName)
-
-const  p = document.querySelector('first')
-const  span = document.querySelector('span')
-
-let text = document.createElement('span')
-text.innerText = myName
-
-p.insertAdjacentHTML('beforeend', text)
-
-document.addEventListener('DOMContentloaded', ()=>{
-    console.log('DOMContentloaded')
-})
-
-window.addEventListener('load', ()=>{
-    console.log('load')
-    console.log(picture.offsetHeight)
-})
-
-window.onload = function () {
-    console.log('load')
-}
-
-function unload(){
-    navigator.sendBeacon('some path', JSON.stringify( {
-        data:"some data"
-    }))
-}
-
-window.addEventListener('unload', unload)
-
-function beforeunload (){
-    console.log('beforeunload')
-    return false
-}
-
-window.addEventListener('beforeunload', beforeunload)
+// console.log(myName)
+//
+// const  p = document.querySelector('first')
+// const  span = document.querySelector('span')
+//
+// let text = document.createElement('span')
+// text.innerText = myName
+//
+// p.insertAdjacentHTML('beforeend', text)
+//
+// document.addEventListener('DOMContentloaded', ()=>{
+//     console.log('DOMContentloaded')
+// })
+//
+// window.addEventListener('load', ()=>{
+//     console.log('load')
+//     console.log(picture.offsetHeight)
+// })
+//
+// window.onload = function () {
+//     console.log('load')
+// }
+//
+// function unload(){
+//     navigator.sendBeacon('some path', JSON.stringify( {
+//         data:"some data"
+//     }))
+// }
+//
+// window.addEventListener('unload', unload)
+//
+// function beforeunload (){
+//     console.log('beforeunload')
+//     return false
+// }
+//
+// window.addEventListener('beforeunload', beforeunload)
