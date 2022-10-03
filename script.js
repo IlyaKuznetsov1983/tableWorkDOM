@@ -111,3 +111,159 @@
 // }
 //
 // window.addEventListener('beforeunload', beforeunload)
+
+
+
+
+
+// function appendNewScript() {
+//     const script = document.createElement('script')
+//     script.src = './newScript.js'
+//     console.log('append newScript')
+//     document.body.prepend(script)
+// }
+// appendNewScript()
+// printScriptName()
+//
+// document.addEventListener('DOMContentLoader', () => {
+//     console.log('DOMContentLoader')
+// })
+//
+
+
+
+
+// function appendNewScriptWithCallBack(srcPath, callBack) {
+//     const script = document.createElement('script')
+//     script.src =srcPath
+//     script.onload = () => {
+//         console.log( 'загрузился')
+//         callBack()
+//     }
+//     script.onerror = () => {
+//         callBack(new Error('скрипт лег'))
+//     }
+//     document.body.prepend(script)
+// }
+//
+// function customCallBack(){
+//     console.log('сработало коллбэк')
+//     printScriptName()
+// }
+//
+// appendNewScriptWithCallBack('./newScript.js', function (error){
+//     if(error) {
+//         console.log(error)
+//     }else{
+//         printScriptName()
+//         appendNewScriptWithCallBack('./secondNewScript.js', function (error){
+//         if(error) {
+//             console.log(error)
+//         }else{
+//             printScriptName()
+//     }
+//     printScriptName()
+//     appendNewScriptWithCallBack('./secondNewScript.js', function () {
+//         printScriptName()
+//     })
+// })
+
+
+
+// PROMISE
+//
+// const promise = new OurPromise((resolve, reject) => {
+//     console.log('Promise запустился сразу')
+//     setTimeout(() =>{
+//         console.log('Зашли с сеттаймаут')
+//         resolve('оТВЕТ')
+//     }, 1000)
+//     console.log('лог после resolve')
+// })
+//
+//
+// let result = promise.then((result) => {
+//     console.log('первый дзен', result)
+//     result.toUpperCase()
+// }).then((result2) => {
+//     console.log('второй дзен', result2)
+//     return result2 + 'добавить еще строку'
+// }).catch((error) => {
+//     console.log('catch error', error)
+//     return 2
+// }).finally(() => {
+//     console.log('finally')
+// })
+//
+// console.log(result)
+//
+// class  OurPromise {
+//     constructor(executor) {
+//         this.lineHandlers = []
+//         this.errorHandler = () => {
+//
+//         }
+//         this.finallyHandler = () => {
+//
+//         }
+//
+//         try {
+//             executor(this.resolve.bind(this), this.reject.bind(this))
+//
+//         } catch (e) {
+//             this.errorHandler(e)
+//         }
+//         executor(this.resolve, this.reject,)
+//     }
+//
+//     resolve(data){
+//         this.lineHandlers.forEach(callBack => {
+//             data = callBack(data)
+//         })
+//         this.finallyHandler()
+//     }
+//      // резолв или реджект ожидают только один аргумент. все доп аргументы будут проигнорированны
+//     reject(error)
+//     then(callBack){
+//         // необходим для чейнинга
+//         this.lineHandlers.push(callBack)
+//             //взвратит обьект который содержит все методы инстанса класса
+//         return this
+//     }
+//
+//
+//     // цепочка промисов подходит для перехватат ошибок. если промис
+//     // завершается с шибкой то управление переходит в ближайший обработчик ошибок catch
+//
+//     catch(callBack){
+//         this.errorHandler = fn
+//         return this
+//     }
+//
+//     finally(callBack){
+//         this.finallyHandler(fn)
+//         return this
+//     }
+//
+//
+// }
+
+let a = 'a'
+a= {car:'bmw'}
+function  foo(param) {
+    //1вариант
+    // param = 'b'
+    // return param
+
+    //2ваирант
+    // console.log('получили', param)
+    // param = 'b'
+    // param.car = 'audi'
+    // return param
+
+
+
+}
+
+console.log(foo(a))
+console.log(a)
