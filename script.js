@@ -280,33 +280,42 @@
 //     return result
 // }
 
+
+
+
+
+
 //создать рандомный
 
-function renderResult(height) {
-const block = document.createElement('div')
-    block.style.height = `${height}px`
-    block.style.background = `
-    rgb(${getRandomInitInclusive(0, 255)},
-     ${getRandomInitInclusive(0, 255)}, 
-     ${getRandomInitInclusive(0, 255)},)
-    `
-    document.body.append(block)
-}
 
-let promisesResult = Promise.all([
-    new Promise((resolve, reject) => {
-        setTimeout(() => resolve(renderResult(30, 1)), 3000)
-    }),
-    new Promise((resolve, reject) => {
-        setTimeout(() => resolve(renderResult(20, 2)),200)
-    }),
-    new Promise((resolve, reject) => {
-        setTimeout(() => resolve(renderResult(40, 3)),1000)
-    }),
-])
-console.log(promisesResult)
-promisesResult.then((result) => console.log(result)).catch((result) =>
-console.log(result))
+
+
+//
+// function renderResult(height) {
+// const block = document.createElement('div')
+//     block.style.height = `${height}px`
+//     block.style.background = `
+//     rgb(${getRandomInitInclusive(0, 255)},
+//      ${getRandomInitInclusive(0, 255)},
+//      ${getRandomInitInclusive(0, 255)},)
+//     `
+//     document.body.append(block)
+// }
+//
+// let promisesResult = Promise.all([
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => resolve(renderResult(30, 1)), 3000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => resolve(renderResult(20, 2)),200)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => resolve(renderResult(40, 3)),1000)
+//     }),
+// ])
+// console.log(promisesResult)
+// promisesResult.then((result) => console.log(result)).catch((result) =>
+// console.log(result))
 
 
 
@@ -325,3 +334,78 @@ console.log(result))
 //     circle.style.top = y + "px";
 //     boardEl.append(circle);
 }
+
+
+// // TODO async / await
+//
+// async function aFoo(){
+//     console.log(1)
+//     return 1
+// }
+// aFoo()
+//
+// console.log(2)
+
+// TODO await
+
+// async function justF(){
+//
+//     console.log('q')
+//     let promise = await new Promise((resolve) => {
+//
+//         console.log('c')
+//         setTimeout(() => resolve(2),1500)
+//     })
+//
+//     console.log('b')
+//     return promise
+// }
+//
+// console.log('w')
+//     justF()
+//
+// console.log('h')
+
+
+// async  function aFoo () {
+//     await  new Promise(resolve => setTimeout((e) => resolve(e), 1000))
+//     return 2
+// }
+//
+// async function secondFoo() {
+//
+//     let r = await  aFoo()
+//     console.log(r)
+// }
+// secondFoo()
+
+setTimeout(() => {
+    console.log('s1')
+},0)
+setTimeout(() => {
+    console.log('s2')
+},0)
+
+new  Promise((resolve) => {
+    console.log('p1')
+    resolve()
+    console.log('p2')
+}).then(() => {
+    console.log('p3')
+})
+
+console.log('w1')
+
+async function test1(){
+    console.log('a1')
+    await test2()
+    console.log('a2')
+}
+
+async function test2(){
+    console.log('a3')
+
+}
+test1()
+
+console.log('w2')
