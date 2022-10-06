@@ -247,10 +247,10 @@
 //
 //
 // }
-
-let a = 'a'
-a= {car:'bmw'}
-function  foo(param) {
+//
+// let a = 'a'
+// a= {car:'bmw'}
+// function  foo(param) {
     //1вариант
     // param = 'b'
     // return param
@@ -264,6 +264,64 @@ function  foo(param) {
 
 
 }
+//
+// console.log(foo(a))
+// console.log(a)
 
-console.log(foo(a))
-console.log(a)
+//
+// // TODO promise.all
+//
+// //массив промисов и итерируемые объекты
+//
+// function getRandomInitInclusive(min, max){
+//     min = Math.ceil(min)
+//     min = Math.ceil(max)
+//     const result = Math.floor(Math.random() * (max - min + 1) + min)
+//     return result
+// }
+
+//создать рандомный
+
+function renderResult(height) {
+const block = document.createElement('div')
+    block.style.height = `${height}px`
+    block.style.background = `
+    rgb(${getRandomInitInclusive(0, 255)},
+     ${getRandomInitInclusive(0, 255)}, 
+     ${getRandomInitInclusive(0, 255)},)
+    `
+    document.body.append(block)
+}
+
+let promisesResult = Promise.all([
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(renderResult(30, 1)), 3000)
+    }),
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(renderResult(20, 2)),200)
+    }),
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(renderResult(40, 3)),1000)
+    }),
+])
+console.log(promisesResult)
+promisesResult.then((result) => console.log(result)).catch((result) =>
+console.log(result))
+
+
+
+
+
+// function createRandomCircle() {
+//     const circle = document.createElement("div");
+//     circle.classList.add("circle");
+//     const size = getRandomNum(5, 50);
+//     const a = boardEl.getBoundingClientRect();
+//     circle.style.width = circle.style.height = size + "px";
+//     circle.style.background = "#fff";
+//     const x = getRandomNum(0, width - size);
+//     const y = getRandomNum(0, height - size);
+//     circle.style.left = x + "px";
+//     circle.style.top = y + "px";
+//     boardEl.append(circle);
+}
