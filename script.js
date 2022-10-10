@@ -379,33 +379,66 @@
 // }
 // secondFoo()
 
-setTimeout(() => {
-    console.log('s1')
-},0)
-setTimeout(() => {
-    console.log('s2')
-},0)
+// setTimeout(() => {
+//     console.log('s1')
+// },0)
+// setTimeout(() => {
+//     console.log('s2')
+// },0)
+//
+// new  Promise((resolve) => {
+//     console.log('p1')
+//     resolve()
+//     console.log('p2')
+// }).then(() => {
+//     console.log('p3')
+// })
+//
+// console.log('w1')
+//
+// async function test1(){
+//     console.log('a1')
+//     await test2()
+//     console.log('a2')
+// }
+//
+// async function test2(){
+//     console.log('a3')
+//
+// }
+// test1()
+//
+// console.log('w2')
 
-new  Promise((resolve) => {
-    console.log('p1')
-    resolve()
-    console.log('p2')
-}).then(() => {
-    console.log('p3')
+
+
+//PROMISE
+
+
+// const promise = new Promise ((resolve, reject) =>{
+//     setTimeout(()=>{
+//         const abrakadabra = Math.floor(Math.random()* 4) + 2;
+//         if (abrakadabra > 3) {
+//             resolve (arrakadarra);
+//         }
+//         reject (abrakadabra);
+//     }, 5000);
+//
+//     });
+//  promise.then(result => console.log(`hello my bro ${result} wtf 100 bax`))
+//      .catch(result => console.log(`hello  ${result} wtf 1000 bax`));
+
+
+
+//////////TODO Fetch
+const  promise = new Promise(()=>{
+
 })
+const fetchPromise = fetch('url', [options])
 
-console.log('w1')
+//http://learnjs.ru
 
-async function test1(){
-    console.log('a1')
-    await test2()
-    console.log('a2')
-}
-
-async function test2(){
-    console.log('a3')
-
-}
-test1()
-
-console.log('w2')
+//http:// это протокол (HTTP и HTTPS)
+//http://learnjs.ru доменное имя
+//? :3000
+//path/to/myfile.html - это адрес ресурса на веб-сервере с реальным местоположением файла
